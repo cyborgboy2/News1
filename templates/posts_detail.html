@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+{% block body %}
+<div class="containe mt-5">
+    <h1>{{ article.title }}</h1>
+
+    <div class="card-clean">
+        <p>{{ article.text }}</p>
+        <a href="/posts/{{ article.id }}/del" class="hover">Delete</a>
+        <a href="/posts/{{ article.id }}/update" class="hover">Update</a>
+    </div>
+    <div class="card-clean">
+        <p>Date: {{ article.date.date() }}</p>
+    </div>
+
+</div>
+{% endblock %}
